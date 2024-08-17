@@ -10,7 +10,8 @@ return {
    webgpu_preferred_adapter = gpu_adapters:pick_best(),
 
    -- color scheme
-   colors = colors,
+   -- colors = colors,
+   color_scheme = 'Dracula',
 
    -- background
    background = {
@@ -29,6 +30,12 @@ return {
    -- scrollbar
    enable_scroll_bar = true,
 
+   -- cursor
+   cursor_blink_ease_in = "Constant",
+   cursor_blink_ease_out = "Constant",
+   cursor_blink_rate = 600,
+   default_cursor_style = 'BlinkingBlock',
+
    -- tab bar
    enable_tab_bar = true,
    hide_tab_bar_if_only_one_tab = false,
@@ -38,6 +45,9 @@ return {
    switch_to_last_active_tab_when_closing_tab = true,
 
    -- window
+   window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+   initial_cols = 120,
+   initial_rows = 25,
    window_padding = {
       left = 5,
       right = 10,

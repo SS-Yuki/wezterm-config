@@ -187,6 +187,27 @@ local mouse_bindings = {
       mods = 'CTRL',
       action = act.OpenLinkAtMouseCursor,
    },
+   {
+		event = {Down = {streak = 1, button = "Right"}},
+		mods = "NONE",
+		action = act.PasteFrom("PrimarySelection"),
+	},
+   -- no copy
+   -- {
+   --    event = { Up = { streak = 1, button = 'Left' } },
+   --    mods = 'NONE',
+   --    action = act.ExtendSelectionToMouseCursor "Cell",
+   -- },
+   -- {
+   --    event = { Down = { streak = 1, button = 'Left' } },
+   --    mods = 'NONE',
+   --    action = act.SelectTextAtMouseCursor "Cell",
+   -- },
+   -- {
+   --    event = { Drag = { streak = 1, button = 'Left' } },
+   --    mods = 'NONE',
+   --    action = act.ExtendSelectionToMouseCursor "Cell",
+   -- },
 }
 
 return {
