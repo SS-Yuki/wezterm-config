@@ -11,11 +11,10 @@ if platform.is_win then
       { label = 'PowerShell', args = { 'pwsh' } },
       { label = 'Windows PowerShell', args = { 'powershell' } },
       { label = 'Command Prompt', args = { 'cmd' } },
+      { label = 'Git Bash', args = {'C:/Applications/Git/bin/bash.exe', '-i', '-l'} },
+      { label = 'Ubuntu 22.04', args = {'C:/Windows/system32/wsl.exe', '-d', 'Ubuntu-22.04'}},
+      { label = 'Aliyun', args = { 'ssh', 'root@47.102.87.107' }},
       -- { label = 'Nushell', args = { 'nu' } },
-      {
-         label = 'Git Bash',
-         args = { 'C:\\Users\\kevin\\scoop\\apps\\git\\current\\bin\\bash.exe' },
-      },
    }
 elseif platform.is_mac then
    options.default_prog = { 'zsh', '-l' }
