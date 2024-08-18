@@ -1,6 +1,8 @@
 local wezterm = require('wezterm')
 local gpu_adapters = require('utils.gpu_adapter')
 local colors = require('colors.custom')
+local platform = require('utils.platform')()
+
 
 return {
    animation_fps = 60,
@@ -46,6 +48,8 @@ return {
 
    -- window
    window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+   integrated_title_button_style = platform.is_linux and "Gnome" or platform.is_mac and "MacOsNative" or "Windows",
+   integrated_title_button_alignment = "Right",
    initial_cols = 120,
    initial_rows = 25,
    window_padding = {
